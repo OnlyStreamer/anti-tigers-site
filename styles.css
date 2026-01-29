@@ -450,3 +450,21 @@ body {
   .tree-right { right: -40px; }
 }
 
+/* Season schedule styles */
+.season-title{font-size:1.4rem;margin-bottom:1rem;color:var(--accent);text-align:center}
+.weeks{display:flex;flex-direction:column;gap:12px;margin-top:1rem}
+.week-row{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:10px;background:linear-gradient(90deg,rgba(0,0,0,0.04),rgba(255,255,255,0.01));border:1px solid rgba(0,0,0,0.06)}
+.week-label{width:90px;color:var(--text-secondary);font-weight:600}
+.match{flex:1;display:flex;align-items:center;justify-content:center;gap:12px}
+.team{font-weight:700;color:var(--text-primary)}
+.team.team-left{color:var(--accent);}
+.team.team-right{color:var(--text-secondary);font-weight:600}
+.vs{color:var(--text-secondary);font-weight:700}
+.scoreboard{width:90px;text-align:right;font-weight:800;color:var(--accent-light)}
+
+@media (max-width: 720px){
+  .week-row{flex-direction:column;align-items:flex-start;gap:8px}
+  .week-label,.scoreboard{width:100%;text-align:left}
+  .match{justify-content:flex-start}
+}
+
