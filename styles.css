@@ -526,3 +526,14 @@ body {
   .sponsor-card{flex-direction:row;align-items:center}
   .sponsor-logo{width:48px;height:48px}
 }
+/* Sponsors - extra polish: accent bar, shimmer, spacing tweaks */
+.sponsor-card{padding:18px;border-radius:14px}
+.sponsor-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:6px;border-top-left-radius:14px;border-bottom-left-radius:14px;background:linear-gradient(180deg,var(--accent),var(--accent-dark));}
+.sponsor-logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));box-shadow:inset 0 -6px 18px rgba(0,0,0,0.15);font-size:15px}
+.sponsor-logo::after{content:'';position:absolute;left:-40%;top:0;height:100%;width:40%;background:linear-gradient(90deg,rgba(255,255,255,0.18),rgba(255,255,255,0));transform:skewX(-18deg);animation:shimmer 2.2s linear infinite;opacity:.6}
+.sponsor-body{padding-top:2px}
+.sponsor-name{font-size:1.05rem}
+.sponsor-line{font-size:0.98rem}
+.sponsor-thanks{font-size:0.9rem;color:var(--accent-light)}
+@keyframes shimmer{from{transform:translateX(-100%) skewX(-18deg)}to{transform:translateX(220%) skewX(-18deg)}}
+@media (max-width:640px){.sponsor-logo{width:52px;height:52px}}
