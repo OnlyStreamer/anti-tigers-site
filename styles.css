@@ -54,11 +54,11 @@ body {
   color: var(--accent);
 }
 
-/* Hamburger Menu Button */
+/* Hamburger Menu Button - 3 Dots */
 .menu-toggle {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -66,41 +66,43 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   padding: 0;
   transition: all .3s ease;
 }
 
-.menu-toggle:hover { transform: scale(1.1); }
-
-.menu-toggle span {
-  width: 24px;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 1px;
-  transition: all .3s ease;
-  transform-origin: center;
+.menu-toggle:hover {
+  transform: scale(1.15);
 }
 
-.menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(10px, 10px); }
-.menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(9px, -9px); }
+.menu-toggle .dot {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  transition: all .3s ease;
+  display: inline-block;
+}
 
-/* Sidebar Menu */
+.menu-toggle:active { transform: scale(0.95); }
+
+/* Sidebar Menu - Cleaner Design */
 .sidebar-menu {
   position: fixed;
   top: 0;
-  right: -380px;
-  width: 360px;
+  right: -100%;
+  width: 100%;
+  max-width: 340px;
   height: 100vh;
-  background: linear-gradient(180deg, rgba(10, 14, 39, 0.98), rgba(5, 8, 16, 0.99));
-  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, rgba(5, 8, 16, 0.99), rgba(10, 14, 39, 0.98));
+  backdrop-filter: blur(15px);
   border-left: 1px solid var(--border-color);
   padding: 0;
   z-index: 100;
-  transition: right .35s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-lg);
+  transition: right .4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -8px 0 40px rgba(0,0,0,0.5);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar-menu.open { right: 0; }
@@ -109,42 +111,45 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem;
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
-  background: rgba(10, 14, 39, 0.95);
+  background: rgba(5, 8, 16, 0.98);
+  backdrop-filter: blur(10px);
 }
 
 .sidebar-header h2 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .menu-close {
   background: transparent;
   border: none;
   color: var(--text-secondary);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 6px;
   transition: all .2s ease;
 }
 
 .menu-close:hover {
-  background: rgba(255,138,0,0.1);
+  background: rgba(255,138,0,0.12);
   color: var(--accent);
+  transform: rotate(90deg);
 }
 
 .sidebar-nav {
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -157,12 +162,27 @@ body {
   padding: 1rem 1.5rem;
   text-align: left;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   transition: all .2s ease;
   border-left: 3px solid transparent;
   position: relative;
   overflow: hidden;
+  margin: 0 0.5rem;
+  border-radius: 6px;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255,138,0,0.1), transparent);
+  opacity: 0;
+  transition: opacity .2s ease;
+  z-index: -1;
 }
 
 .nav-btn:hover {
@@ -170,6 +190,8 @@ body {
   border-left-color: var(--accent);
   padding-left: 2rem;
 }
+
+.nav-btn:hover::before { opacity: 1; }
 
 .nav-btn:active { transform: scale(0.98); }
 
@@ -180,18 +202,19 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(3px);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
   opacity: 0;
   pointer-events: none;
   z-index: 95;
-  transition: opacity .35s ease;
+  transition: opacity .4s ease, backdrop-filter .4s ease;
 }
 
 .sidebar-backdrop.open {
   opacity: 1;
   pointer-events: auto;
 }
+
 
 /* Main App Container */
 .app {
