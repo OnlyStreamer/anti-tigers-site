@@ -20,13 +20,11 @@ const menuClose = document.getElementById('menu-close');
 function toggleMenu() {
   sidebarMenu.classList.toggle('open');
   sidebarBackdrop.classList.toggle('open');
-  menuToggle.classList.toggle('active');
 }
 
 function closeMenu() {
   sidebarMenu.classList.remove('open');
   sidebarBackdrop.classList.remove('open');
-  menuToggle.classList.remove('active');
 }
 
 menuToggle.addEventListener('click', toggleMenu);
