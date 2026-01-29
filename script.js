@@ -87,3 +87,42 @@ function renderPlayers(){
 }
 
 renderPlayers();
+// Sponsors rendering
+(function(){
+  const sponsors = [
+    {name:'RedBull Energy', tagline:'Fueling our team with relentless energy.', thanks:'Thank you for powering our wins.'},
+    {name:'Atlanta Falcons', tagline:'Proud supporters of community sport.', thanks:'We appreciate your team spirit.'},
+    {name:'Vienna Vikings', tagline:'Building local talent and fierce competition.', thanks:'Thanks for backing our squad.'},
+    {name:'Mercedes Benz', tagline:'Engineering excellence on and off the field.', thanks:'Thank you for driving our ambitions.'},
+    {name:'Monster Energy', tagline:'Amping our players with top-tier energy.', thanks:'Thanks for keeping the intensity high.'},
+    {name:'Vienna Airport', tagline:'Connecting fans and teams worldwide.', thanks:'We appreciate your logistical support.'},
+    {name:'WWF Save The Animals', tagline:'Protecting nature and inspiring athletes.', thanks:'Thank you for supporting our values.'},
+    {name:'Noodle King', tagline:'Feeding the team with tasty victories.', thanks:'Thanks for the delicious support.'}
+  ];
+
+  function renderSponsors(){
+    const grid = document.getElementById('sponsors-grid');
+    if(!grid) return;
+    grid.innerHTML = '';
+    sponsors.forEach((s)=>{
+      const card = document.createElement('div');
+      card.className = 'sponsor-card';
+      const logoText = s.name.split(' ').map(w=>w[0]).join('').slice(0,3).toUpperCase();
+      card.innerHTML = `<div class="sponsor-logo">${logoText}</div><div class="sponsor-body"><div class="sponsor-name">${s.name}</div><div class="sponsor-line">${s.tagline}</div><div class="sponsor-thanks">${s.thanks}</div></div>`;
+      grid.appendChild(card);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    renderSponsors();
+    const btn = document.getElementById('btn-sponsors');
+    if(btn) btn.addEventListener('click', ()=> showScreen('sponsors-screen'));
+    // allow direct nav via sidebar links with data-target
+    document.querySelectorAll('[data-target]').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const t = el.getAttribute('data-target');
+        if(t) showScreen(t);
+      });
+    });
+  });
+})();
