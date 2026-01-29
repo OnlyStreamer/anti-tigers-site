@@ -47,7 +47,7 @@ document.getElementById('btn-rivals').addEventListener('click', () => showScreen
 document.getElementById('btn-awards').addEventListener('click', () => showScreen('awards'));
 document.getElementById('btn-coaches').addEventListener('click', () => showScreen('coaches'));
 document.getElementById('btn-location').addEventListener('click', () => showScreen('location'));
-document.getElementById('btn-sponsors').addEventListener('click', () => showScreen('sponsors'));
+document.getElementById('btn-sponsors').addEventListener('click', () => showScreen('sponsors-screen'));
 
 // Back buttons
 document.getElementById('btn-back-from-info').addEventListener('click', () => showScreen('title'));
@@ -126,3 +126,4 @@ renderPlayers();
     });
   });
 })();
+
