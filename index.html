@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Anti-Tigers — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section id="title-screen" class="screen">
+        <div class="hero">
+          <h1 class="team-name">Anti-Tigers</h1>
+          <p class="tagline">Relentless. United. Victorious.</p>
+          <div class="actions buttons-grid">
+            <button id="btn-info" class="btn primary">Information</button>
+            <button id="btn-players" class="btn outline">Players</button>
+            <button id="btn-season" class="btn ghost">Season</button>
+            <button id="btn-rivals" class="btn ghost">Rivals</button>
+            <button id="btn-awards" class="btn ghost">Awards</button>
+            <button id="btn-coaches" class="btn ghost">Coaches</button>
+            <button id="btn-location" class="btn ghost">Location</button>
+            <button id="btn-sponsors" class="btn ghost">Sponsors</button>
+          </div>
+        </div>
+        <footer class="credit">Professional American Football — Season 2026</footer>
+      </section>
+
+      <section id="info-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>About the Anti-Tigers</h2>
+          <button id="btn-back-from-info" class="btn small">Back</button>
+        </header>
+        <div class="content">
+          <p>The Anti-Tigers are built on discipline, teamwork, and innovation. Founded to compete at the highest level, our club combines elite coaching with community-driven values.</p>
+          <ul>
+            <li>Founded: 2018</li>
+            <li>Stadium: Liberty Field</li>
+            <li>Head Coach: Jordan Hayes</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="players-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>Players</h2>
+          <button id="btn-back-from-players" class="btn small">Back</button>
+        </header>
+        <div class="players-grid" id="players-grid">
+          <!-- Player cards injected by script -->
+        </div>
+      </section>
+
+      <section id="season-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>Season</h2>
+          <button id="btn-back-from-season" class="btn small">Back</button>
+        </header>
+        <div class="content">
+          <p>Season schedule, standings and results will be posted here.</p>
+        </div>
+      </section>
+
+      <section id="rivals-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>Rivals</h2>
+          <button id="btn-back-from-rivals" class="btn small">Back</button>
+        </header>
+        <div class="content">
+          <p>Key rival teams and historical matchups.</p>
+        </div>
+      </section>
+
+      <section id="awards-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>Awards</h2>
+          <button id="btn-back-from-awards" class="btn small">Back</button>
+        </header>
+        <div class="content">
+          <p>Club and player awards, records, and honors.</p>
+        </div>
+      </section>
+
+      <section id="coaches-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>Coaches</h2>
+          <button id="btn-back-from-coaches" class="btn small">Back</button>
+        </header>
+        <div class="content">
+          <p>Meet the coaching staff and support team.</p>
+        </div>
+      </section>
+
+      <section id="location-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>Location</h2>
+          <button id="btn-back-from-location" class="btn small">Back</button>
+        </header>
+        <div class="content">
+          <p>Stadium address, directions, and parking information.</p>
+        </div>
+      </section>
+
+      <section id="sponsors-screen" class="screen hidden">
+        <header class="screen-header">
+          <h2>Sponsors</h2>
+          <button id="btn-back-from-sponsors" class="btn small">Back</button>
+        </header>
+        <div class="content">
+          <p>Our partners and sponsors who make the season possible.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
