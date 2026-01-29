@@ -468,3 +468,34 @@ body {
   .match{justify-content:flex-start}
 }
 
+/* Season layout overrides: elevated cards & staggered animations */
+.season-content{position:relative;z-index:5;padding:1rem}
+.season-title{font-size:1.6rem;margin-bottom:1rem;color:var(--accent);text-align:center;font-weight:800}
+.weeks{display:flex;flex-direction:column;gap:14px;margin-top:1.25rem}
+.week-row{display:flex;align-items:center;justify-content:space-between;padding:14px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(0,0,0,0.03));border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(0,0,0,0.35);transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,opacity .28s ease;transform:translateY(10px);opacity:0;animation:slideIn .45s cubic-bezier(.2,.8,.2,1) both}
+.week-row:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(0,0,0,0.45)}
+.week-label{width:100px;color:var(--text-secondary);font-weight:700}
+.match{flex:1;display:flex;align-items:center;justify-content:center;gap:14px}
+.team{font-weight:700;color:var(--text-primary)}
+.team.team-left{color:var(--accent);}
+.team.team-right{color:var(--text-secondary);font-weight:600}
+.vs{color:var(--text-secondary);font-weight:800}
+.scoreboard{width:90px;text-align:right;font-weight:900;color:var(--accent-light)}
+
+/* stagger animation delays */
+.week-row:nth-child(1){animation-delay:.06s}
+.week-row:nth-child(2){animation-delay:.12s}
+.week-row:nth-child(3){animation-delay:.18s}
+.week-row:nth-child(4){animation-delay:.24s}
+.week-row:nth-child(5){animation-delay:.30s}
+.week-row:nth-child(6){animation-delay:.36s}
+.week-row:nth-child(7){animation-delay:.42s}
+.week-row:nth-child(8){animation-delay:.48s}
+
+@keyframes slideIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+@media (max-width:720px){
+  .week-row{flex-direction:column;align-items:flex-start;gap:10px}
+  .week-label,.scoreboard{width:100%;text-align:left}
+  .match{justify-content:flex-start}
+}
