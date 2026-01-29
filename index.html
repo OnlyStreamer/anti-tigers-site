@@ -10,21 +10,41 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <header class="navbar">
+      <div class="navbar-content">
+        <h1 class="navbar-brand">Anti-Tigers</h1>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <nav id="sidebar-menu" class="sidebar-menu">
+      <div class="sidebar-header">
+        <h2>Menu</h2>
+        <button id="menu-close" class="menu-close" aria-label="Close Menu">✕</button>
+      </div>
+      <div class="sidebar-nav">
+        <button id="btn-info" class="nav-btn">Information</button>
+        <button id="btn-players" class="nav-btn">Players</button>
+        <button id="btn-season" class="nav-btn">Season</button>
+        <button id="btn-rivals" class="nav-btn">Rivals</button>
+        <button id="btn-awards" class="nav-btn">Awards</button>
+        <button id="btn-coaches" class="nav-btn">Coaches</button>
+        <button id="btn-location" class="nav-btn">Location</button>
+        <button id="btn-sponsors" class="nav-btn">Sponsors</button>
+      </div>
+    </nav>
+
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
     <main class="app">
       <section id="title-screen" class="screen">
         <div class="hero">
           <h1 class="team-name">Anti-Tigers</h1>
           <p class="tagline">Relentless. United. Victorious.</p>
-          <div class="actions buttons-grid">
-            <button id="btn-info" class="btn primary">Information</button>
-            <button id="btn-players" class="btn outline">Players</button>
-            <button id="btn-season" class="btn ghost">Season</button>
-            <button id="btn-rivals" class="btn ghost">Rivals</button>
-            <button id="btn-awards" class="btn ghost">Awards</button>
-            <button id="btn-coaches" class="btn ghost">Coaches</button>
-            <button id="btn-location" class="btn ghost">Location</button>
-            <button id="btn-sponsors" class="btn ghost">Sponsors</button>
-          </div>
         </div>
         <footer class="credit">Professional American Football — Season 2026</footer>
       </section>
