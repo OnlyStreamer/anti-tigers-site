@@ -90,14 +90,14 @@ renderPlayers();
 // Sponsors rendering
 (function(){
   const sponsors = [
-    {name:'RedBull Energy', tagline:'Fueling our team with relentless energy.', thanks:'Thank you for powering our wins.'},
-    {name:'Atlanta Falcons', tagline:'Proud supporters of community sport.', thanks:'We appreciate your team spirit.'},
-    {name:'Vienna Vikings', tagline:'Building local talent and fierce competition.', thanks:'Thanks for backing our squad.'},
-    {name:'Mercedes Benz', tagline:'Engineering excellence on and off the field.', thanks:'Thank you for driving our ambitions.'},
-    {name:'Monster Energy', tagline:'Amping our players with top-tier energy.', thanks:'Thanks for keeping the intensity high.'},
-    {name:'Vienna Airport', tagline:'Connecting fans and teams worldwide.', thanks:'We appreciate your logistical support.'},
-    {name:'WWF Save The Animals', tagline:'Protecting nature and inspiring athletes.', thanks:'Thank you for supporting our values.'},
-    {name:'Noodle King', tagline:'Feeding the team with tasty victories.', thanks:'Thanks for the delicious support.'}
+     {name:'Red Bull', tagline:'Supplying relentless energy for every minute of play.', thanks:'Thank you for fueling our performance.'},
+     {name:'Atlanta Falcons', tagline:'A proud community partner cheering on local sport.', thanks:'We appreciate your continued community support.'},
+     {name:'Vienna Vikings', tagline:'A storied club inspiring fierce competition and local talent.', thanks:'Thanks for the spirited rivalry and encouragement.'},
+     {name:'Mercedes-Benz', tagline:'Driven by engineering excellence, on and off the field.', thanks:'Thank you for helping us reach higher standards.'},
+     {name:'Monster Energy', tagline:'Powering peak intensity with bold flavor.', thanks:'Thanks for keeping the team energized.'},
+     {name:'Vienna Airport', tagline:'Connecting fans and teams across borders.', thanks:'We appreciate your vital logistical support.'},
+     {name:'WWF — Save The Animals', tagline:'Protecting wildlife and the world we play in.', thanks:'Thank you for supporting conservation and our values.'},
+     {name:'Noodle King', tagline:'Serving up hearty meals and team morale.', thanks:'Thanks for feeding the team and the fans.'}
   ];
 
   function renderSponsors(){
