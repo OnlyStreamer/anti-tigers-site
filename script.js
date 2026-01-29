@@ -61,14 +61,12 @@ document.getElementById('btn-back-from-sponsors').addEventListener('click', () =
 
 // Player data
 const players = [
-  {number:12,name:'Ethan Carter',position:'QB'},
-  {number:3,name:'Marcus Lane',position:'RB'},
-  {number:88,name:'Derek Shaw',position:'WR'},
-  {number:54,name:'Omar Ruiz',position:'LB'},
-  {number:23,name:'Caleb Young',position:'CB'},
-  {number:77,name:'Trent Hale',position:'OT'},
-  {number:46,name:'Noah Price',position:'S'},
-  {number:91,name:'Victor Knox',position:'DE'}
+  {number:4,name:'Angelina Tanzer',position:'QB'},
+  {number:14,name:'Julian Bednar',position:'WR/RB'},
+  {number:10,name:'Althea Arelano',position:'WR'},
+  {number:5,name:'Leonhard Bertle',position:'LB/CB'},
+  {number:6,name:'Tobias Hametner',position:'CB'},
+  {number:7,name:'Therese Friedel',position:'S'}
 ];
 
 function renderPlayers(){
