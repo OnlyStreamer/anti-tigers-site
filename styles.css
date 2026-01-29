@@ -1,11 +1,12 @@
 :root{
   --bg-dark:#3d2817;
   --bg-darker:#2a1810;
-  --accent:#ff8a00;
-  --accent-dark:#e07a00;
+  --accent:#ff9f1c;
+  --accent-dark:#e68500;
+  --accent-light:#ffb347;
   --text-primary:#ffffff;
   --text-secondary:#e8d5c4;
-  --border-color:rgba(255,138,0,0.15);
+  --border-color:rgba(255,159,28,0.2);
   --shadow:0 10px 40px rgba(0,0,0,0.4);
   --shadow-lg:0 20px 60px rgba(0,0,0,0.6);
   --radius:12px;
@@ -253,6 +254,8 @@ body {
   padding: 3rem;
   box-shadow: var(--shadow);
   animation: fadeUp .4s ease both;
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
 .hidden { display: none !important; }
@@ -385,7 +388,7 @@ body {
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,138,0,0.06), rgba(255,138,0,0.01));
+  background: linear-gradient(180deg, rgba(255,159,28,0.08), rgba(255,159,28,0.02));
   padding: 1.5rem;
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
@@ -396,7 +399,7 @@ body {
 .card:hover {
   transform: translateY(-8px);
   border-color: var(--accent);
-  box-shadow: 0 12px 35px rgba(255,138,0,0.2);
+  box-shadow: 0 12px 35px rgba(255,159,28,0.25);
 }
 
 .player-name {
